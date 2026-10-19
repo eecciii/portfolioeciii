@@ -1,0 +1,276 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; 
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding-bottom: 120px; 
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  max-width: 900px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- HOME SECTION --- */
+#home {
+  width: 100%;
+}
+
+#home .maintitle {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.8rem;
+  color: #FFD444;
+  text-align: center; 
+  padding: 40px 0 20px;
+  word-break: break-word;
+}
+
+.homecontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 30px;
+  align-items: center;      
+  justify-content: center;
+  width: 100%;
+}
+
+.home-content {
+  text-align: left;        
+}
+
+#home .title {
+  color: #5C6AC4;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  object-fit: cover;
+  border-radius: 50%;       
+  justify-self: center;    
+  width: 100%;
+  max-width: 300px;  
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.03);
+}
+
+.linksosmed {
+  margin: 15px 0;
+  display: flex;
+  gap: 15px;
+}
+
+.linkig {
+  text-decoration: none;
+  color: #2D7495;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease;
+}
+
+.linkig:hover {
+  transform: scale(1.05);
+}
+
+.subtitle {
+  color: #4D8DBA;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.softskills img {
+  max-width: 100%;
+  width: 280px;
+  height: auto;
+  margin: 0;
+}
+
+/* --- EXPERIENCES SECTION --- */
+#experiences {
+  width: 100%;
+  max-width: 900px;   
+  padding: 30px 25px;
+  background: #578EF5;
+  color: white;
+  border-radius: 30px;
+  margin: 40px auto 0 auto;
+  box-shadow: 0 10px 25px rgba(87, 142, 245, 0.3);
+}
+
+#experiences .title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+#experiences ul {
+  padding-left: 20px;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+#experiences li {
+  margin-bottom: 8px;
+}
+
+/* --- GALLERY SECTION --- */
+#gallery {
+  width: 100%;
+  max-width: 900px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+#gallery .title {
+  color: #4D8DBA;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.karya {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  display: flex;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 800px;
+  background: #578EF5;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  border-radius: 50px;
+  color: white;
+  box-shadow: 0 10px 25px rgba(87, 142, 245, 0.4);
+  z-index: 1000;
+}
+
+.navbar h3 {
+  background: #faff92;
+  color: #578EF5;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.navbarmenu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbarmenu a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.navbarmenu a:hover {
+  color: #faff92;
+}
+
+/* --- MEDIA QUERIES UNTUK HP --- */
+@media (max-width: 768px) {
+  #home .maintitle {
+    font-size: 1.4rem;
+    padding-top: 25px;
+  }
+
+  .homecontainer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .avatar {
+    order: -1; /* Foto ditaruh di atas teks saat di HP */
+    max-width: 200px;
+  }
+
+  .home-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .linksosmed {
+    justify-content: center;
+  }
+
+  #experiences {
+    padding: 25px 20px;
+    border-radius: 20px;
+  }
+
+  #experiences .title, #gallery .title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 15px;
+    bottom: 15px;
+    width: calc(100% - 30px);
+  }
+
+  .navbar h3 {
+    font-size: 0.8rem;
+    padding: 4px 12px;
+  }
+
+  .navbarmenu {
+    gap: 12px;
+  }
+
+  .navbarmenu a {
+    font-size: 0.85rem;
+  }
+}
